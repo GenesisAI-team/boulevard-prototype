@@ -12,8 +12,8 @@ import {
   X,
 } from "lucide-react";
 
-const TEL = "+34848681506";
-const TEL_DISPLAY = "+34 848 68 15 06";
+const TEL = "+34948143003";
+const TEL_DISPLAY = "+34 948 14 30 03";
 const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=Bar+Boulevard+P.%C2%BA+Anelier+9+31014+Pamplona+Navarra";
 const ADDRESS = "P.º Anelier, 9 · 31014 Pamplona, Navarra";
