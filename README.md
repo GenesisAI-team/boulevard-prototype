@@ -1,6 +1,6 @@
-# Fusión 20 — MVP web
+# Boulevard — MVP web
 
-Prototipo responsive para el Bar Restaurante Fusión 20 de Sangüesa (Navarra).
+Prototipo responsive para el Bar Restaurante Boulevard de Pamplona (Navarra).
 
 ## Requisitos
 

@@ -15,8 +15,8 @@ import {
 const TEL = "+34848681506";
 const TEL_DISPLAY = "+34 848 68 15 06";
 const MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=Bar+Restaurante+Fusi%C3%B3n+20+Sang%C3%BCesa";
-const ADDRESS = "C. Santiago, 2, bajo · 31400 Sangüesa, Navarra";
+  "https://www.google.com/maps/search/?api=1&query=Bar+Boulevard+P.%C2%BA+Anelier+9+31014+Pamplona+Navarra";
+const ADDRESS = "P.º Anelier, 9 · 31014 Pamplona, Navarra";
 
 const dishes = [
   ["Entrecot al punto", "Brasa", "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1400&q=82"],
@@ -81,8 +81,8 @@ export default function App() {
     <div className="site-shell">
       <header className={`header ${scrolled || menuOpen ? "header--solid" : ""}`}>
         <div className="header__inner container">
-          <a className="logo" href="#inicio" aria-label="Fusión 20, inicio">
-            FUSIÓN <span>20</span>
+          <a className="logo" href="#inicio" aria-label="Boulevard, inicio">
+            BOULEVARD
           </a>
           <nav className="desktop-nav" aria-label="Navegación principal">
             {nav.map(([href, label]) => (
@@ -123,10 +123,10 @@ export default function App() {
           />
           <div className="hero__overlay" />
           <div className="hero__content container">
-            <p className="eyebrow eyebrow--light"><span /> Sangüesa · Navarra</p>
+            <p className="eyebrow eyebrow--light"><span /> Pamplona · Navarra</p>
             <h1>Cocina con carácter.<br /><em>Sabor</em> para recordar.</h1>
             <p className="hero__lead">
-              Cocina española y mediterránea en el corazón de Sangüesa:
+              Cocina española y mediterránea en el corazón de Pamplona:
               platos variados, raciones generosas y un ambiente para disfrutar.
             </p>
             <div className="button-row">
@@ -148,7 +148,7 @@ export default function App() {
               <small>Valoración pública</small>
             </article>
             <article>
-              <strong><span>N.º 2</span> en Sangüesa</strong>
+              <strong><span>N.º 2</span> en Pamplona</strong>
               <small>De 14 restaurantes</small>
             </article>
             <article>
@@ -259,7 +259,7 @@ export default function App() {
         <section id="visita" className="section container visit">
           <div>
             <p className="eyebrow">Visítanos</p>
-            <h2>Te esperamos<br />en <em>Sangüesa</em>.</h2>
+            <h2>Te esperamos<br />en <em>Pamplona</em>.</h2>
             <div className="contact-list">
               <p><MapPin /> <span><strong>Dirección</strong>{ADDRESS}</span></p>
               <p><Phone /> <span><strong>Reservas y pedidos</strong><a href={`tel:${TEL}`}>{TEL_DISPLAY}</a></span></p>
@@ -282,12 +282,12 @@ export default function App() {
           <a className="map-card" href={MAPS_URL} target="_blank" rel="noreferrer">
             <img
               src="https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?auto=format&fit=crop&w=1400&q=82"
-              alt="Mapa visual de ubicación de Fusión 20 en Sangüesa"
+              alt="Mapa visual de ubicación de Boulevard en Pamplona"
               loading="lazy"
             />
             <div>
               <MapPin size={38} />
-              <strong>Fusión 20 · Sangüesa</strong>
+              <strong>Boulevard · Pamplona</strong>
               <small>{ADDRESS}</small>
               <span>Abrir en Google Maps</span>
             </div>
@@ -298,8 +298,8 @@ export default function App() {
       <footer className="footer">
         <div className="footer__grid container">
           <div>
-            <p className="logo logo--footer">FUSIÓN <span>20</span></p>
-            <p>Bar Restaurante en Sangüesa. Cocina española y mediterránea, casera y variada.</p>
+            <p className="logo logo--footer">BOULEVARD</p>
+            <p>Bar Restaurante en Pamplona. Cocina española y mediterránea, casera y variada.</p>
           </div>
           <nav aria-label="Navegación del pie">
             <strong>Navegar</strong>
@@ -312,7 +312,7 @@ export default function App() {
           </div>
         </div>
         <div className="footer__bottom container">
-          <span>© {new Date().getFullYear()} Bar Restaurante Fusión 20</span>
+          <span>© {new Date().getFullYear()} Bar Restaurante Boulevard</span>
           <em>Propuesta web demostrativa</em>
         </div>
       </footer>
