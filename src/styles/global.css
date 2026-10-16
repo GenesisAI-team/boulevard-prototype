@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/*
+  Tokens semánticos neutrales. Sin branding ni paleta final:
+  los valores definitivos se definirán en issues de diseño.
+*/
+@theme {
+  --color-surface: #ffffff;
+  --color-surface-muted: #f5f5f5;
+  --color-ink: #171717;
+  --color-ink-muted: #737373;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
