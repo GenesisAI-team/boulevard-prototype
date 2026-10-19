@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [rewrite/astro-v2, "feat/**", "fix/**", "chore/**"]
+  pull_request:
+    branches: [rewrite/astro-v2]
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.22.2"
+          cache: "npm"
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Tests unitarios
+        run: npm run test:run
+
+      - name: Tests E2E
+        run: npx playwright install --with-deps chromium && npm run test:e2e
+
+      - name: Build
+        run: npm run build

@@ -1,0 +1,34 @@
+---
+import "../styles/global.css";
+import { buildPageTitle } from "../lib/meta";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "",
+  description = "Página base placeholder de una reconstrucción técnica. Sin contenido comercial verificado.",
+} = Astro.props;
+
+const pageTitle = buildPageTitle(title);
+// TODO(VERIFICAR): `site` en astro.config y canonical cuando exista dominio real.
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="min-h-dvh flex flex-col antialiased">
+    <main class="flex-1">
+      <slot />
+    </main>
+  </body>
+</html>
